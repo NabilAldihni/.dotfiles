@@ -204,3 +204,20 @@ focus_follows_mouse no
 
 bindsym $mod+Shift+greater move workspace to output right
 bindsym $mod+Shift+less move workspace to output left
+
+exec --no-startup-id i3-msg 'workspace 2; exec alacritty'
+exec --no-startup-id i3-msg 'workspace 1; exec firefox'
+
+## Manual management of external displays
+# Set the shortcuts and what they do
+set $mode_display Ext Screen (h) HDMI ON, (l) LAPTOP ONLY
+mode "$mode_display" {
+    bindsym h exec --no-startup-id xrandr --output DP-2-2 --auto --right-of eDP-1 && xrandr --output DP-3 --auto --right-of DP-2-2, mode "default"
+    bindsym l exec --no-startup-id xrandr --output DP-3 --auto --off && xrandr --output DP-2-2 --auto --off, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+# Declare here the shortcut to bring the display selection menu
+bindsym $mod+x mode "$mode_display"
