@@ -38,6 +38,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'mbbill/undotree'
+Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
@@ -69,5 +70,5 @@ nnoremap <leader>p "+p
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '>-2<CR>gv=gv
 
-colorscheme gruvbox
+colorscheme nord
 set background=dark
