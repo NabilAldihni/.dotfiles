@@ -7,7 +7,6 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set nu
-set nowrap
 set smartcase
 set noswapfile
 set nobackup
@@ -19,6 +18,10 @@ set relativenumber
 set termguicolors
 set hidden
 set clipboard=unnamed
+set textwidth=0
+set wrapmargin=0
+set wrap
+set linebreak
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey

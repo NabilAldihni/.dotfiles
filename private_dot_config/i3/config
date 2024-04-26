@@ -9,7 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -212,7 +212,7 @@ exec --no-startup-id i3-msg 'workspace 1; exec firefox'
 # Set the shortcuts and what they do
 set $mode_display Ext Screen (h) HDMI ON, (l) LAPTOP ONLY
 mode "$mode_display" {
-    bindsym h exec --no-startup-id xrandr --output DP-2-2 --auto --right-of eDP-1 && xrandr --output DP-3 --auto --right-of DP-2-2, mode "default"
+    bindsym h exec --no-startup-id xrandr --output DP-3 --auto --right-of eDP-1 && xrandr --output DP-2-2 --auto --right-of DP-3, mode "default"
     bindsym l exec --no-startup-id xrandr --output DP-3 --auto --off && xrandr --output DP-2-2 --auto --off, mode "default"
 
     # back to normal: Enter or Escape
