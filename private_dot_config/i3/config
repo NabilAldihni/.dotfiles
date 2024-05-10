@@ -205,6 +205,8 @@ focus_follows_mouse no
 bindsym $mod+Shift+greater move workspace to output right
 bindsym $mod+Shift+less move workspace to output left
 
+bindsym $mod+z exec --no-startup-id systemctl suspend
+
 exec --no-startup-id i3-msg 'workspace 2; exec alacritty'
 exec --no-startup-id i3-msg 'workspace 1; exec firefox'
 
